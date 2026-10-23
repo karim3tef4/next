@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; }
+body { @apply bg-salt text-canal-dark font-body antialiased; }
+h1, h2, h3 { @apply font-display; }
+
+@layer components {
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm font-semibold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-canal disabled:opacity-50 disabled:cursor-not-allowed; }
+  .btn-primary { @apply btn bg-canal text-white hover:bg-canal-dark; }
+  .btn-brass { @apply btn bg-brass text-white hover:bg-[#a97716]; }
+  .btn-ghost { @apply btn border border-canal/25 text-canal hover:bg-canal-soft; }
+  .input { @apply w-full rounded-lg border border-canal/25 bg-white px-3 py-2.5 text-sm focus:border-canal focus:outline-none focus:ring-2 focus:ring-canal/20; }
+  .label { @apply mb-1 block text-sm font-semibold; }
+  .tier { @apply rounded-full px-2.5 py-0.5 text-xs font-semibold; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; }
+}
